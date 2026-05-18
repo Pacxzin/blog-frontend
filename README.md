@@ -1,73 +1,86 @@
-# React + TypeScript + Vite
+Blog Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Frontend do sistema de blog desenvolvido como case técnico para o processo seletivo da Mind Group.
 
-Currently, two official plugins are available:
+📌 Sobre o projeto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+A aplicação consiste em um sistema de blog com autenticação de usuários, permitindo:
 
-## React Compiler
+Cadastro e login
+Visualização de artigos
+Criação de novos artigos
+Edição de artigos
+Exclusão de artigos
+Upload de imagem banner
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+O projeto foi desenvolvido utilizando React + Typescript seguindo o layout disponibilizado no Figma, com algumas melhorias focadas em usabilidade e experiência do usuário.
 
-## Expanding the ESLint configuration
+🚀 Tecnologias utilizadas
+ReactJS
+Typescript
+Vite
+React Router DOM
+Axios
+Context API
+CSS / Styled Components / Tailwind (ajuste conforme usou)
+JWT Authentication
+📂 Estrutura do projeto
+src/
+ ├── assets/
+ ├── components/
+ ├── pages/
+ ├── services/
+ ├── contexts/
+ ├── hooks/
+ ├── routes/
+ ├── styles/
+ └── utils/
+⚙️ Como rodar o projeto
+1. Clone o repositório
+git clone https://github.com/Pacxzin/blog-frontend.git
+2. Entre na pasta
+cd blog-frontend
+3. Instale as dependências
+npm install
+4. Configure as variáveis de ambiente
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Crie um arquivo .env na raiz do projeto:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+VITE_API_URL=http://localhost:3000
+5. Rode o projeto
+npm run dev
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+O projeto estará disponível em:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+http://localhost:5173
+🔐 Funcionalidades
+Usuário
+Cadastro
+Login autenticado
+Logout
+Artigos
+Listagem de artigos
+Visualização detalhada
+Criação de artigo
+Edição de artigo
+Exclusão de artigo
+Upload de imagem banner
+🎨 Interface
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+O layout foi baseado no protótipo disponibilizado no Figma durante o processo seletivo.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Algumas melhorias de UI/UX foram adicionadas visando:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+melhor responsividade
+melhor organização visual
+melhor experiência de navegação
+📱 Responsividade
+
+A aplicação foi desenvolvida com foco em responsividade para:
+
+Desktop
+Tablet
+Mobile
+👨‍💻 Autor
+
+Desenvolvido por Leonardo Pacífico de Medeiros
